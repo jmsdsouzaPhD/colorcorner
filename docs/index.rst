@@ -1,45 +1,58 @@
-Welcome to colorcorner's documentation!
+=================================
+ColorCorner Software
 =================================
 
-.. automodule:: colorcorner
-    :members:
+This is a software based on corner.py (https://corner.readthedocs.io/en/latest/)
+for 2d plots switched to color map [0,1] (including CL contours and scatter points) 
+and 1d histograms switched to smooth density curves.
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Contents:
+.. image::  ../figures/2plots.png
+plot_scatter=True (left) , plot_scatter=False (right)
 
-   Section 1 : Introduction
-   Section 2 : Example
-   
-======
-API
-======
+Installation
+---------
 
----------------
-Section 1 : Introduction
----------------
+.. code-block:: console
+    $ pip install colorcorner
 
-Some text here ...
 
---------------------------
-Section 2 : Example 
---------------------------
-
-Bellow I show some example
+Usage [example]
+---------
 
 .. code:: python
 
-	import numpy as np
-	import matplotlib.pyplot as plt
-	import colorcorner.colorcorner as cc
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import colorcorner.colorcorner as cc
+    
+    x = np.random.normal(0,1,10000)
+    y = np.random.normal(0,1,10000)
+    z = np.random.normal(0,1,10000)
+    
+    labels = ['$\\alpha', '$\\beta$', '$\gamma$']
+    
+    fig = cc.plot(
+                    np.transpose([x,y,z]), 
+                    smooth1d=2,
+                    color1d='b',
+                    labels=labels,
+                    cmap='jet',
+                    CL=[30,60,90], # confidence levels of 30%, 60% and 90%
+                    CL_color='r',  # color of the CL curves
+                    plot_scatter=True,
+                    scatter_color='w'
+                )
+    
+    plt.show()
 
-	x = np.random.normal(0,1,10000)
-	y = np.random.normal(0,1,10000)
-	z = np.random.normal(0,1,10000)
+=================================  
+Authors
+=================================
 
-	labels = ['$\\alpha$','$\\beta$','$\gamma$']
+- `Josiel Mendonça Soares de Souza <https://github.com/jmsdsouzaPhD>
 
-	fig = cc.plot(np.transpose([x,y,z]),smooth1d=2,labels=labels,cmap='jet',CL=[30,60,90],CL_color='r',plot_scatter=False,color1d='b',scatter_color='w')
-	fig.savefig('fig.png')
-	plt.show()
+=================================
+License
+=================================
 
+MIT License
