@@ -2,19 +2,22 @@
 ColorCorner Software
 =================================
 
+.. image:: /figures/logo3D.png
+
 This is a software based on corner.py (https://corner.readthedocs.io/en/latest/)
 for 2d plots switched to color map [0,1] (including CL contours and scatter points) 
 and 1d histograms switched to smooth density curves.
 
-.. image::  ../figures/2plots.png
+.. image::  /figures/2plots.png
 plot_scatter=True (left) , plot_scatter=False (right)
 
 Installation
 ---------
 
+Here is the console command:
+
 .. code-block:: console
     $ pip install colorcorner
-
 
 Usage [example]
 ---------
@@ -46,10 +49,12 @@ Usage [example]
     plt.show()
 
 =================================  
-Authors
+About the Author
 =================================
 
-- `Josiel Mendonça Soares de Souza <https://github.com/jmsdsouzaPhD>
+- `Josiel Mendonça Soares de Souza <https://github.com/jmsdsouzaPhD>`
+- PhD in Physics by Universidade Federal do Rio Grande do Norte, Brazil
+- Research Field: Gravitation, Cosmology and Gravitational Waves
 
 =================================
 License
