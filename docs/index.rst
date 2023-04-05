@@ -52,17 +52,20 @@ API
 =================================
 
 .. code:: python
+
 	colorcorner.plot(samples, smooth1d, color1d, labels, cmap, CL, CL_color, plot_corner, scatter_color)
 
-*Parameters:*	*samples*: array
-		*smooth1d*: integer
-		*color1d*: string
-		*labels*: list
-		*cmap*: string
-		*CL*: list
-		*CL_color*: string
-		*plot_corner*: boolean
-		*scatter_color*: string
+*Parameters:*	
+
+	- *samples*: array
+	- *smooth1d*: integer
+	- *color1d*: string
+	- *labels*: list
+	- *cmap*: string
+	- *CL*: list
+	- *CL_color*: string
+	- *plot_corner*: boolean
+	- *scatter_color*: string
 
 =================================  
 About the Author
