@@ -51,16 +51,18 @@ Usage [example]
 API
 =================================
 
-.. code-block:: json :>json
+.. code:: python
+	colorcorner.plot(samples, smooth1d, color1d, labels, cmap, CL, CL_color, plot_corner, scatter_color)
 
-	{
-	"name": "John",
-	"age": 30,
-	"city": "New York"
-	}
-
-:>json integer id: The ID of the project
-:>json string name: The name of the project.
+*Parameters:*	*samples*: array
+		*smooth1d*: integer
+		*color1d*: string
+		*labels*: list
+		*cmap*: string
+		*CL*: list
+		*CL_color*: string
+		*plot_corner*: boolean
+		*scatter_color*: string
 
 =================================  
 About the Author
