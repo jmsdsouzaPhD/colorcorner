@@ -1,3 +1,0 @@
-.. automodule:: colorcorner
-   :members:
-   :undoc-members:
