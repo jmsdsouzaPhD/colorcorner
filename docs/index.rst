@@ -48,6 +48,29 @@ Usage [example]
     plt.show()
 
 =================================  
+API
+=================================
+
+.. sourcecode:: js
+
+	{
+	    "count": 1000,
+	    "previous": null,
+	    "results": [VERSIONS],
+	    "next": "https://readthedocs.org/api/v2/version/?limit=10&offset=10"
+	}
+
+
+:>json string next: URI for next set of Versions.
+:>json string previous: URI for previous set of Versions.
+:>json integer count: Total number of Versions.
+:>json array results: Array of ``Version`` objects.
+
+:query string project__slug: Narrow to the versions for a specific ``Project``
+:query boolean active: Pass ``true`` or ``false`` to show only active or inactive versions.
+By default, the API returns all versions.
+
+=================================  
 About the Author
 =================================
 
